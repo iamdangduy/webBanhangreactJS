@@ -1,7 +1,19 @@
-a {
-    color: white;
+a.active {
+    color: aliceblue;
 }
 
-a:hover {
-    color: rgb(146, 255, 95);
+ul li a {
+    color: aquamarine;
+}
+
+ul li a:hover {
+    color: coral;
+}
+
+.product-item {
+    color: black;
+}
+
+.product-item:hover {
+    color: lightblue;
 }

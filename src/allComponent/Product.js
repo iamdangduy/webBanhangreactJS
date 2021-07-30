@@ -6,7 +6,8 @@ class Product extends Component {
     }
     render() {
         return (
-            <div className="col-4 mt-4" style={{float: 'left'}}>
+            <a className="product-item" href="http://facebook.com">
+              <div className="col-4 mt-4" style={{float: 'left'}}>
                 <div className="card">
                  <img className="card-img-top" src={this.props.linkanh} alt="Card image cap" />
                   <div className="card-body" style={{maxWidth: '100%'}}>
@@ -14,6 +15,7 @@ class Product extends Component {
                   </div>
                 </div>
               </div>
+            </a>
         );
     }
 }
