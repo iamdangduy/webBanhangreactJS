@@ -17,3 +17,27 @@ ul li a:hover {
 .product-item:hover {
     color: lightblue;
 }
+
+.product-card {
+    width: 31%;
+    float: left;
+    margin: 10px;
+}
+
+.div_to {
+    overflow: hidden
+}
+
+@media only screen and (max-width: 63.9375em) {
+    .product-card {
+        width: 40%;
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .product-card {
+        width: 95%;
+        float: right;
+    }
+}

@@ -9,7 +9,7 @@ import DieuHuong from './dieuhuong/DieuHuong';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="div_to">
         <Router>
         <NavBar/>
         <ChuyenDong/>
