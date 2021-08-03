@@ -14,7 +14,7 @@ class App extends Component {
         <NavBar/>
         <ChuyenDong/>
           <DieuHuong/>
-        <Footer/>
+        {/* <Footer/> */}
         </Router>
       </div>
     );
