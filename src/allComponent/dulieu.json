@@ -16,7 +16,7 @@
     },
     {
         "id": 4,
-        "linkanh" : "https://product.hstatic.net/1000075078/product/cold-brew-classic_0627eece2e014fa1aeacb724e954011d_master.jpg",
+        "linkanh" : "https://product.hstatic.net/1000075078/product/cold-brew-pbt_5fb45e24ca6243f894ef45797fbebe7e_master.jpg",
         "douong": "Cold Brew"
     },
     {
@@ -28,6 +28,20 @@
         "id": 6,
         "linkanh" : "https://product.hstatic.net/1000075078/product/cafe-den-da_18234c186f2f44f0a2d7ec1ce0e58158_master.jpg",
         "douong": "Cà Phê Đen"
+    },
+    {
+        "id": 7,
+        "linkanh": "https://i2.wp.com/www.lifeasastrawberry.com/wp-content/uploads/2013/07/strawberry-cocktail.jpg",
+        "douong": "Cocktail Strawberry"
+    },
+    {
+        "id": 8,
+        "linkanh": "https://product.hstatic.net/1000075078/product/americano-da_7495646eaad24b8cbe0e68e8e479f01f_master.jpg",
+        "douong": "Americano"
+    },
+    {
+        "id": 9,
+        "linkanh": "https://product.hstatic.net/1000075078/product/cafe-da-say_3de4ce716b534b1183736c2ce0cdbc25_master.jpg",
+        "douong": "Cà phê đá xay"
     }
-
 ]
