@@ -13,7 +13,7 @@ class Menu extends Component {
             {
                 data.map((value, key) => {
                     if (key <= 5) {
-                      return <Product tinId={value.id} linkanh={value.linkanh} douong = {value.douong}></Product>
+                      return <Product key={key} tinId={value.id} linkanh={value.linkanh} douong = {value.douong}></Product>
                     }
                   }
                 )

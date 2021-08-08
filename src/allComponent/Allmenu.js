@@ -11,7 +11,7 @@ class Allmenu extends Component {
           <div className="col-md-8 " style={{textAlign: 'center'}}>
           {
                 data.map((value, key) => 
-                <Product tinId={value.id} linkanh={value.linkanh} douong = {value.douong}></Product>
+                <Product key={key} tinId={value.id} linkanh={value.linkanh} douong = {value.douong}></Product>
                 )
             }
           </div>

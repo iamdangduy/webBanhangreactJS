@@ -1,7 +1,44 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isRedirect: false,
+      fName: "",
+      fPhone: "",
+      fMail: ""
+    }
+  }
+
+  submitForm = (event) => {
+    event.preventDefault();
+    this.setState({
+      isRedirect: true
+    });
+  }
+
+  giaTri = (event) => {
+    let ten = event.target.name;
+    let giatri = event.target.value;
+    this.setState({
+      [ten]: giatri
+    });
+  }
+  getGiatri = () => {
+    var noiDung = "";
+    noiDung += "Ten: " + this.state.fName;
+    noiDung += "/ Email" + this.state.fMail;
+    noiDung += "/ Phone" + this.state.fPhone;
+    return noiDung;
+  }
+
     render() {
+      if (this.state.isRedirect) {
+        console.log(this.getGiatri());
+        return <Redirect to="/" />;
+      }
         return (
             <section className="page-section" id="contact">
         <div className="container px-4 px-lg-5 mt-5">
@@ -17,20 +54,20 @@ class Contact extends Component {
               <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                 {/* Name input*/}
                 <div className="form-floating mb-3 ">
-                  <input className="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sb-can-submit="no" />
+                  <input className="form-control" name="fName" onChange={(event) => this.giaTri(event)} id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sb-can-submit="no" />
                   <label htmlFor="name">Full name</label>
                   <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                 </div>
                 {/* Email address input*/}
                 <div className="form-floating mb-3">
-                  <input className="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no" />
+                  <input className="form-control" name="fMail" id="email" onChange={(event) => this.giaTri(event)} type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no" />
                   <label htmlFor="email">Email address</label>
                   <div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                   <div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                 </div>
                 {/* Phone number input*/}
                 <div className="form-floating mb-3">
-                  <input className="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no" />
+                  <input className="form-control" name="fPhone" onChange={(event) => this.giaTri(event)} id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no" />
                   <label htmlFor="phone">Phone number</label>
                   <div className="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                 </div>
@@ -58,7 +95,7 @@ class Contact extends Component {
                 {/* an error submitting the form*/}
                 <div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
                 {/* Submit Button*/}
-                <div className="d-grid"><button className="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                <div className="d-grid"><button className="btn btn-primary btn-xl disabled" id="submitButton" type="submit" onClick={(event) => this.submitForm(event)}>Submit</button></div>
               </form>
             </div>
           </div>
